@@ -1,4 +1,4 @@
-# Ladrillos Lark · Sistema interno de ventas e inventario
+# Ladrillos Lark · Sistema de ventas e inventario
 
 El proyecto Ladrillos Lark surgió de una necesidad de la ferretería Lark, ubicada en San Juan de Miraflores, Lima. El personal anotaba en papel las ventas y las existencias de materiales como ladrillos, cemento, arena y fierros. Para saber cuánto material quedaba disponible, debía revisar esos apuntes.
 
