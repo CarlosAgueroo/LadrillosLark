@@ -19,3 +19,4 @@ Los tres roles pueden consultar productos y pedidos y actualizar sus datos de co
 - NetBeans con soporte para Java Web.
 - Apache Tomcat 9.
 - MySQL. Para ejecutar el proyecto en Windows, puedes utilizar XAMPP con phpMyAdmin.
+<img width="935" height="709" alt="Captura de pantalla 2026-11-11 222128" src="https://github.com/user-attachments/assets/cf8be55e-cabf-46ae-b1ba-e26d987b9588" />
