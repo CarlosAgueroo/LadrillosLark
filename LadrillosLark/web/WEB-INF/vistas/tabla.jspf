@@ -1,0 +1,2 @@
+<%@ page pageEncoding="UTF-8" %>
+<% List<Fila> tabla=(List<Fila>)request.getAttribute("filas");if(tabla==null||tabla.isEmpty()){ %><p class="empty">No hay registros para mostrar.</p><% }else{ %><div class="table-responsive"><table class="table table-hover align-middle"><thead><tr><% for(String col:tabla.get(0).keySet()){ %><th><%=html(col.replace('_',' '))%></th><% } %></tr></thead><tbody><% for(Fila row:tabla){ %><tr><% for(Object value:row.values()){ %><td><%=html(value)%></td><% } %></tr><% } %></tbody></table></div><% } %>

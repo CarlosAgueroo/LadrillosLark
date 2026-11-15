@@ -1,0 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ include file="cabecera.jspf" %>
+<section class="auth-grid"><div class="auth-copy"><p class="eyebrow">BIENVENIDO A LARK</p><h1>Gestión interna<br>Ladrillos Lark.</h1><p>Acceso para Administrador, Cajero y Almacenero.<br>Gestiona ventas, pedidos e inventario.</p></div><form class="panel auth-form" method="post" action="<%=base%>/app/login"><h2>Iniciar sesión</h2><input type="hidden" name="csrf" value="<%=csrf%>"><label>Usuario<input class="form-control" name="usuario" autocomplete="username" required maxlength="50"></label><label>Contraseña<input class="form-control" type="password" name="clave" autocomplete="current-password" required maxlength="128"></label><button class="btn btn-primary w-100">Ingresar</button><p>Solicita tu acceso al administrador.</p></form></section>
+<%@ include file="pie.jspf" %>

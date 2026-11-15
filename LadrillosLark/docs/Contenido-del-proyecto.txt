@@ -1,0 +1,9 @@
+src/java: código Java MVC, DAO y seguridad.
+web: JSP, estilos, scripts e imágenes.
+database/bd_ladrillos_lark.sql: instalación nueva.
+database/actualizar_sistema_interno.sql: migración desde el ZIP original.
+docs: alcance, arquitectura, permisos y pruebas actuales.
+test: pruebas Java sin base de datos.
+README.txt: instrucciones de instalación y actualización.
+dist/LadrillosLark.war: aplicación compilada para Tomcat 9 y Java 17+.
+Las antiguas capturas y diagramas se retiraron porque ya no representan este alcance.

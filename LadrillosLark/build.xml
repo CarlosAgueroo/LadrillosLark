@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LadrillosLark" default="dist" basedir="."><description>Aplicación web MVC + DAO para NetBeans y Ant</description><import file="nbproject/build-impl.xml"/></project>

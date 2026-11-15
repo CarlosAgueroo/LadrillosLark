@@ -1,0 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ include file="cabecera.jspf" %>
+<% Fila perfil=(Fila)request.getAttribute("perfil"); %><section class="panel narrow"><h1>Mi perfil</h1><p><%=html(perfil.texto("nombres"))%> <%=html(perfil.texto("apellidos"))%> · <%=html(perfil.texto("correo"))%></p><form method="post" action="<%=base%>/app/perfil"><input type="hidden" name="csrf" value="<%=csrf%>"><label>Teléfono<input class="form-control" name="telefono" maxlength="20" required value="<%=html(perfil.texto("telefono"))%>"></label><label>Dirección<input class="form-control" name="direccion" maxlength="250" required value="<%=html(perfil.texto("direccion"))%>"></label><button class="btn btn-primary">Guardar cambios</button></form><p class="muted">Para corregir datos de identidad, solicita la actualización al administrador.</p></section>
+<%@ include file="pie.jspf" %>

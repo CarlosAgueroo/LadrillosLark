@@ -1,0 +1,13 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.*,java.math.*,modelo.*" %><%@ page import="static seguridad.Validar.html" %>
+<% String base=request.getContextPath(); Usuario user=(Usuario)session.getAttribute("usuario"); String csrf=html(session.getAttribute("csrf")); %>
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ladrillos Lark | Sistema interno</title><link rel="stylesheet" href="<%=base%>/css/bootstrap.min.css"><link rel="stylesheet" href="<%=base%>/css/lark.css"><script src="<%=base%>/js/lark.js" defer></script></head><body>
+<div class="topline">SISTEMA INTERNO · PERSONAL AUTORIZADO <span>Proyecto académico · Pagos simulados</span></div>
+<header class="main-header"><a class="brand" href="<%=base%>/app/catalogo"><span class="brand-icon">L</span> LARK<span class="brand-small">LADRILLOS & FERRETERÍA</span></a><nav aria-label="Principal"><a href="<%=base%>/app/catalogo">Catálogo</a>
+<% if(user==null){ %><a href="<%=base%>/app/login">Ingresar</a><% }else{ %>
+<% if(user.es(1,2)){ %><a href="<%=base%>/app/carrito">Nueva venta</a><% } %><a href="<%=base%>/app/pedidos">Pedidos</a>
+<a href="<%=base%>/app/perfil"><%=html(user.nombre)%></a><form method="post" action="<%=base%>/app/logout" class="inline"><input type="hidden" name="csrf" value="<%=csrf%>"><button class="btn btn-outline-dark btn-sm">Salir</button></form><% } %></nav></header>
+<% if(user!=null){ %><nav class="staff-nav" aria-label="Gestión">
+<% if(user.es(1)){ %><a href="<%=base%>/app/dashboard">Dashboard</a><a href="<%=base%>/app/gestion?entidad=producto">Productos</a><a href="<%=base%>/app/gestion?entidad=categoria">Categorías</a><a href="<%=base%>/app/gestion?entidad=usuario">Usuarios</a><a href="<%=base%>/app/gestion?entidad=proveedor">Proveedores</a><a href="<%=base%>/app/reportes">Reportes y ventas</a><% } %>
+<% if(user.es(1,3)){ %><a href="<%=base%>/app/inventario">Inventario</a><% } %></nav><% } %>
+<main class="container-fluid page-shell"><% if(session.getAttribute("mensaje")!=null){ %><div class="alert alert-success" role="status"><%=html(session.getAttribute("mensaje"))%></div><% session.removeAttribute("mensaje"); } %>

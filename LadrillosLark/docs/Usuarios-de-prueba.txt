@@ -1,0 +1,7 @@
+BASE NUEVA — contraseña común: Lark2026!
+admin       Administrador
+cajero      Cajero
+almacenero  Almacenero
+
+BASE ACTUALIZADA: se mantienen usuarios y contraseñas existentes.
+El usuario vendedor pasa a tener rol Cajero, conservando su nombre de acceso.
